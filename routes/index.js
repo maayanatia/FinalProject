@@ -5,7 +5,8 @@ import { rateLimiter } from '../utils/rateLimiter.js';
 
 const router = express.Router();
 
-router.use(rateLimiter('global'));
+router.get('/advice/api', rateLimiter('advice', 1500), getRandomAdvice);
+router.get('/jokes/api', rateLimiter('joke', 1500), getRandomJoke);
 router.use(adviceRoutes);
 router.use(jokesRoutes);
 
