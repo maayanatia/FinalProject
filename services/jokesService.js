@@ -1,6 +1,5 @@
-const JOKE_API_URL = 'https://icanhazdadjoke.com/';
-
 export const fetchRandomJoke = async () => {
+  const JOKE_API_URL = process.env.JOKE_API_URL || 'https://icanhazdadjoke.com/';
   const response = await fetch(JOKE_API_URL, {
     headers: { Accept: 'application/json' }
   });
