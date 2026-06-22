@@ -1,4 +1,4 @@
-import { getRandom, getAll } from '../dal/items.js';
+import { getRandom, getAll, getById} from '../dal/items.js';
 
 export const fetchRandomItem = async () => {
     // Call the DAL function directly
@@ -19,4 +19,14 @@ export const fetchAllItems = async () => {
     } 
     
     return items;
+};
+
+export const fetchItemById = async (id) => {
+    const item = await getById(id);
+    
+    if (!item) {
+        throw new Error('Item not found');
+    }
+    
+    return item;
 };
