@@ -9,7 +9,7 @@ router.use(jokesRoutes);
 router.use(itemRoutes);
 
 router.get('/', (req, res) => {
-  res.json({ message: 'Welcome to the Random Advice, Jokes & Items API' });
+  res.json({message:'Welcome to the Random Advice, Jokes & Items API'});
 });
 
 export default router;
