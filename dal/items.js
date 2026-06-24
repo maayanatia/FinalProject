@@ -1,7 +1,7 @@
 export const items = [
-  { id: 1, name: 'Apple', description: 'A juicy red apple' },
-  { id: 2, name: 'Banana', description: 'A ripe yellow banana' },
-  { id: 3, name: 'Carrot', description: 'A crunchy orange carrot' }
+  { id:1,name:'Apple',description:'A juicy red apple'},
+  { id:2,name:'Banana',description:'A ripe yellow banana'},
+  { id:3,name:'Carrot',description:'A crunchy orange carrot'}
 ];
 
 export const getAll = async () => {
@@ -10,8 +10,8 @@ export const getAll = async () => {
 
 
 export const getRandom = async () => {
-  const allItems = await getAll();
-  const randomIndex = Math.floor(Math.random() * allItems.length);
+  const allItems=await getAll();
+  const randomIndex=Math.floor(Math.random() * allItems.length);
   return allItems[randomIndex];
 };
 

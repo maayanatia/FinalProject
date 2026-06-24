@@ -1,6 +1,6 @@
-import { Router } from 'express';
-import { getRandomItem, getAllItems, getItemById } from '../controllers/itemController.js';
-import { rateLimiter } from '../utils/rateLimiter.js';
+import {Router} from 'express';
+import {getRandomItem,getAllItems,getItemById} from '../controllers/itemController.js';
+import {rateLimiter} from '../utils/rateLimiter.js';
 
 const router = Router();
 

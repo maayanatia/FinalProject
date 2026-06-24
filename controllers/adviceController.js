@@ -1,6 +1,6 @@
-import { fetchRandomAdvice } from '../services/adviceService.js';
+import {fetchRandomAdvice} from '../services/adviceService.js';
 
 export const getRandomAdvice = async (req, res) => {
-  const advice = await fetchRandomAdvice();
+  const advice=await fetchRandomAdvice();
   res.json({advice});
 };
